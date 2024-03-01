@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void convminuscula(char texto[]) {
+    for (int i = 0; texto[i] != '\0'; i++) {
+        if (texto[i] >= 'A' && texto[i] <= 'Z') {
+            texto[i] += 32;
+        }
+    }
+    printf("A frase em minusculo fica: %s\n", texto);
+}
+
+int main() {
+    char frase[101];
+    printf("Digite uma frase: ");
+    scanf("%100[^\n]", frase);
+    convminuscula(frase);
+    return 0;
+}
