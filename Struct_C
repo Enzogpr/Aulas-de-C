@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct FolhaPagamento {
+
+
+    char nome[80];
+    int n_departamento;
+    double salario;
+};
+
+int main()
+{
+    struct FolhaPagamento func1;
+
+    printf("Nome do funcionario: ");
+    gets(func1.nome);
+    printf("\nNumero do departamento: ");
+    scanf("%d",&func1.n_departamento);
+    printf("\nSalario: ");
+    scanf("%lf",&func1.salario);
+
+
+    system("cls");
+
+    printf("Informacoes do funcionario: \n");
+    printf("Nome: %s\n",func1.nome);
+    printf("Numero do departamento: %d\n", func1.n_departamento);
+    printf("Salario: %.2lf\n", func1.salario);
+    return 0;
+}
