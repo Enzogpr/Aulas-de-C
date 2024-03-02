@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Data{
+
+    int Dia;
+    char mes[10];
+    int ano;
+};
+
+typedef struct Venda{
+
+    int pecas;
+    float preco;
+    struct Data DiaVenda;
+
+} Venda;
+
+
+int main()
+{
+    Venda A = {20, 110.0,{25, "outubro",2022}};
+
+    printf( "Pecas: %d\n", A.pecas);
+    printf("Precos: %.2f\n", A.preco);
+    printf("Data: %d de %s de %d\n", A.DiaVenda.Dia, A.DiaVenda.mes, A.DiaVenda.ano);
+    return 0;
+}
